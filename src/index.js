@@ -3,7 +3,11 @@ import ReactDom from 'react-dom';
 
 import App from './App';
 import './index.css';
+import {ContextProvider} from './contexts/ContextProvider'
 
 ReactDom.render(
-    <App />, document.getElementById('root')
+    <ContextProvider>
+        <App />
+    </ContextProvider>
+    , document.getElementById('root')
 )
